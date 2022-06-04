@@ -19,6 +19,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	UStaticMeshComponent* Mesh;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -28,6 +31,4 @@ private:
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* Root;
 
-	UPROPERTY(EditDefaultsOnly)
-	UStaticMeshComponent* Mesh;
 };
